@@ -16,6 +16,7 @@ public class ListDemo
        staff.addLast("Tom");
 
       // | in the comments indicates the iterator position
+      // Need an iterator for LL's
       ListIterator<String> iterator = staff.listIterator();// |DHRT 
 
       iterator.next();  // D|HRT
