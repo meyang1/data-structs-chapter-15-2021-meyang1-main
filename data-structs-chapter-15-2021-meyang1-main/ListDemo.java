@@ -9,29 +9,38 @@ public class ListDemo
    public static void main(String[] args)
    {
 
-       LinkedList<String> staff = new LinkedList<>();
-       staff.addLast("Diana");
+       LinkedList<String> staff = new LinkedList<>(); //Diamond Syntax
+       staff.addLast("Diana"); //This is a series of objects connected by a node
        staff.addLast("Harry");
        staff.addLast("Romeo");
        staff.addLast("Tom");
 
       // | in the comments indicates the iterator position
-      ListIterator<String> iterator = staff.listIterator();// |DHRT
+      ListIterator<String> iterator = staff.listIterator();// |DHRT 
 
-      iterator.next();  // DHRT
-      iterator.next();  // DHRT
+      iterator.next();  // D|HRT
+      iterator.next();  // DH|RT
 
       // Add more elements after second element
 
-      iterator.add("Juliet");              // DHJRT
-      iterator.add("Nina");              // DHJNRT
+      iterator.add("Juliet");              // DHJ|RT
+      iterator.add("Nina");              // DHJN|RT
 
-      iterator.next();              // DHJNRT
+      iterator.next();              // DHJNR|T
+
 
       // Remove last traversed element
 
-      iterator.remove();              // DHJNT
+      iterator.remove();              // DHJN |T 
+            // returns last one traversed ('R')
+            // DHJN T; In b/w N and T is empty
+            
+      // Must call next or previous first to move on
+      // Cannot call remove twice, IllegalStateException
 
+      iterator.previous(); //goes to previous  DHJ|NT
+      iterator.remove(); //removes last one traversed DHJT
+      
       // Print all elements
 
       System.out.println(staff);
