@@ -50,7 +50,7 @@ public class setExamples
        
        
        //print out HashSet will display in what seems like random order
-       for (String word :words)
+       for (String word : t)
        {
            System.out.println(word);
            
