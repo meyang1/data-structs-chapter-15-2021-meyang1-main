@@ -1,0 +1,7 @@
+#BlueJ class context
+comment0.target=ListUtil
+comment0.text=\r\n\ \ \ This\ class\ supplies\ a\ utility\ method\ to\ reverse\ the\ entries\ in\ a\ linked\ list.\r\n
+comment1.params=strings
+comment1.target=void\ reverse(java.util.LinkedList)
+comment1.text=\r\n\ \ \ \ \ \ Reverses\ the\ elements\ in\ a\ linked\ list\r\n\ \ \ \ \ \ @param\ strings\ the\ linked\ list\ to\ reverse\r\n
+numComments=2
