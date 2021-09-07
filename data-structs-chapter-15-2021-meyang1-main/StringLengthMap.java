@@ -18,9 +18,9 @@ public class StringLengthMap
       try (Scanner in = new Scanner(new File(filename)))
       {
 
-         Map<Integer, String> textMap = new TreeMap<>();
+         Map<Integer, String> wordMap = new TreeMap<>();
          
-         String temp = " ";
+         String temp = "";
          while (in.hasNext())
          {
             String word = clean(in.next());
@@ -29,12 +29,17 @@ public class StringLengthMap
             
             // Update the map here
             // Modify Worked Example 15.1
-            temp = textMap.get(len);
-            temp += ", " + word; 
-            textMap.put(len, temp);
-
+            temp = wordMap.get(len); //stores word
+            temp += word; //adds to current str
+            textMap.put(len, temp); //puts into map
+            temp += ", "; //formatting "one, two"
          }
-         System.out.println(textMap);// Print the strings, in increasing order of their length
+         
+         for(Integer key : wordMap){
+            String words = wordMap.get(key);  
+            System.out.println(key + ": " + words);
+         }
+         // Print the strings, in increasing order of their length
          // Use this format: 1: i, a, i
       }
       catch (FileNotFoundException e)
