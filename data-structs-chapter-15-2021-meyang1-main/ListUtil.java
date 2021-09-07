@@ -10,14 +10,30 @@ public class ListUtil
       Reverses the elements in a linked list
       @param strings the linked list to reverse
    */
+   
    public static void reverse(LinkedList<String> strings)
    {
-      LinkedList<String> reversedList = new LinkedList<>();
-      ListIterator<String> iterator = strings.listIterator();
-      
-      while(iterator.hasNext()){
-          reversedList.addFirst(iterator.next()); 
+       
+      if(strings.size() > 1){
+          String s= strings.removeFirst();
+          reverse(strings);
+          strings.addLast(s);
         }
-      System.out.println(reversedList);
+        
    }
 }
+
+/*for(int i=0; i<strings.size(); i++){ iterator.next(); }
+      
+      
+      for(int i=0; i<strings.size(); i++){
+          temp = iterator.previous(); //M
+          strings.remove();
+          strings.addLast(temp);
+          for(int j=0; j<i; j++){
+            iterator.previous();
+           }
+      }
+      */
+     
+     

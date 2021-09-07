@@ -1,0 +1,6 @@
+#BlueJ class context
+comment0.target=Primes
+comment0.text=\r\n\ \ \ Implement\ a\ method\ for\ computing\ prime\ numbers.\ This\ method\ will\r\n\ \ \ compute\ all\ prime\ numbers\ up\ to\ n.\r\n\ \ \ Choose\ n\r\n\ \ \ Insert\ all\ numbers\ from\ 2\ to\ n\ into\ a\ set\r\n\ \ \ Then\ erase\ all\ multiples\ of\ 2\ (except2)\ 4,6,8,10,12\ ...\r\n\ \ \ Erase\ all\ mulitples\ of\ 3;\ 6,9,12,15\r\n\ \ \ go\ up\ to\ square\ root\ of\ n\ then\ print\ the\ set\r\n\r\n
+comment1.params=args
+comment1.target=void\ main(java.lang.String[])
+numComments=2
