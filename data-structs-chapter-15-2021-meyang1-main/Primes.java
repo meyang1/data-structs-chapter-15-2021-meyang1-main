@@ -34,11 +34,18 @@ public class Primes
       }
       
       Iterator<Integer> iter = numSet.iterator();
-      for(int i=2; i<Math.sqrt(n); i++){
-          iter.next();
-          iter.next();
-          iter.next();
-          iter.remove();
+      int temp = numSet.size();
+      for(int j=0; j<temp/Math.sqrt(n); j++){ 
+          
+          for(int i=2; i<Math.sqrt(n); i++){ //2, 3, 4, 5, 6, 7    50
+              /*iter.next();
+              iter.next();
+              iter.next();
+              iter.remove();*/
+              if(iter.next()%i==0)iter.remove(); // 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12    --> 3
+              //iter.previous();
+             // iter.next();
+         }
       }
       
       System.out.println(numSet);

@@ -1,0 +1,8 @@
+#BlueJ class context
+comment0.target=StringLengthMap
+comment0.text=\r\n\ \ \ Read\ all\ words\ from\ a\ file\ and\ add\ them\ to\ a\r\n\ \ \ map\ whose\ keys\ are\ word\ lengths\ and\ whose\ values\r\n\ \ \ are\ comma-separated\ strings\ of\ words\ of\ the\ same\ length.\r\n\ \ \ Then\ print\ out\ those\ strings,\ in\ increasing\ order\ by\r\n\ \ \ the\ length\ of\ their\ entries.\r\n\ \ \ Modify\ Worked\ Example\ 15.1.\r\n
+comment1.params=args
+comment1.target=void\ main(java.lang.String[])
+comment2.params=s
+comment2.target=java.lang.String\ clean(java.lang.String)
+numComments=3

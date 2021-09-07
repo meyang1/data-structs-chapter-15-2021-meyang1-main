@@ -2,10 +2,10 @@
 dependency1.from=ReverseTester
 dependency1.to=ListUtil
 dependency1.type=UsesDependency
-editor.fx.0.height=0
-editor.fx.0.width=0
-editor.fx.0.x=0
-editor.fx.0.y=0
+editor.fx.0.height=745
+editor.fx.0.width=816
+editor.fx.0.x=292
+editor.fx.0.y=4
 objectbench.height=94
 objectbench.width=1342
 package.divider.horizontal=0.6

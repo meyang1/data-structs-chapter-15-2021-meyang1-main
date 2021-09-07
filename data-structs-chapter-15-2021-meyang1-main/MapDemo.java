@@ -15,19 +15,19 @@ public class MapDemo
        //  key   values
        //Map<String, Color> favColors = new HashMap<>();
        //Will display in order Hash does not
-       Map<String, Color> favColors = new TreeMap<>();
+       Map<String, Color> favColors = new TreeMap<>(); //String and Color const.
        
        //add obj to a Map
-       favColors.put("Kennny",Color.blue);
-       favColors.put("Tom",Color.pink);
-       favColors.put("Payton",Color.green);
-       favColors.put("Hana",Color.magenta);
+       favColors.put("Jason",Color.blue);
+       favColors.put("Henry",Color.pink);
+       favColors.put("Basil",Color.green);
+       favColors.put("Jack",Color.magenta);
        favColors.put("Hayes",Color.green);
-       favColors.put("Brad",Color.white);
-       favColors.put("Sarah",Color.BLUE);
+       favColors.put("Joey",Color.white);
+       favColors.put("Kyle",Color.BLUE);
        
        // change the value -> use put method
-       favColors.put("Tom",Color.red);
+       favColors.put("Jason",Color.red);
 
 
       //create Set<String> keySet
@@ -38,8 +38,9 @@ public class MapDemo
 
       for (String key: keySet)
       {
+          //to access the "value collection" use the get method
           Color value = favColors.get(key);
-          System.out.println(key +":"+value);
+          System.out.println(key +":"+value);   
 
       }
    }

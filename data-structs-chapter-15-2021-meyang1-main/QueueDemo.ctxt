@@ -1,0 +1,6 @@
+#BlueJ class context
+comment0.target=QueueDemo
+comment0.text=\r\n\ \ \ This\ program\ simulates\ a\ print\ queue.\ Note\ that\ documents\ are\ printed\r\n\ \ \ in\ the\ same\ order\ as\ they\ are\ submitted.\r\n
+comment1.params=args
+comment1.target=void\ main(java.lang.String[])
+numComments=2
