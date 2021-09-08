@@ -17,7 +17,6 @@ public class StringLengthMap
 
       try (Scanner in = new Scanner(new File(filename)))
       {
-
          Map<Integer, String> textMap = new TreeMap<>();
          
          String temp = " ";
