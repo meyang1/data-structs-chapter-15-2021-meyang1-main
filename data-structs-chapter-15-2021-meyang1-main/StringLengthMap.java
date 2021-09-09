@@ -21,7 +21,7 @@ public class StringLengthMap
       try (Scanner in = new Scanner(new File(filename)))
       {
          String temp = " ";
-         Map<Integer, String> wordMap = new TreeMap<>();
+         Map<Integer, String> wordMap = new TreeMap<>(); //create Map 'wordMap'
         
          while (in.hasNext())
          {
@@ -44,9 +44,9 @@ public class StringLengthMap
         
          // Print the strings, in increasing order of their length
          // Use this format: 1: i, a, i,
-        for (Integer words : wordMap.keySet()) //iterate thru keys/values
+        for (Integer words : wordMap.keySet()) 
         {
-            System.out.println(words + ":" + wordMap.get(words)); 
+            System.out.println(words + ":" + wordMap.get(words)); //iterate & print keys/values
         }
       }
          
