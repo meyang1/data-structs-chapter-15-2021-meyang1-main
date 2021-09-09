@@ -1,0 +1,6 @@
+#BlueJ class context
+comment0.target=StackDemo
+comment0.text=\r\n\ \ \ This\ program\ simulates\ an\ undo\ stack.\ Note\ that\ operations\r\n\ \ \ must\ be\ undone\ in\ the\ opposite\ order\ in\ which\ they\ are\ first\r\n\ \ \ issued.\r\n
+comment1.params=args
+comment1.target=void\ main(java.lang.String[])
+numComments=2

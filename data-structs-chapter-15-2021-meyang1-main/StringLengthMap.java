@@ -27,7 +27,6 @@ public class StringLengthMap
          {
             String word = clean(in.next());
             Integer len = word.length();
-            System.out.println(word);
             
             // Update the map here
             // Modify Worked Example 15.1

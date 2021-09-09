@@ -1,3 +1,4 @@
+
 import java.util.Scanner;
 import java.util.Set;
 import java.util.TreeSet;
@@ -15,10 +16,6 @@ import java.util.Iterator;
 
 */
 
-
-// n = 36
-// [
-// n < 6
 public class Primes
 {
    public static void main(String[] args)
@@ -26,8 +23,8 @@ public class Primes
       Scanner in = new Scanner(System.in);
       System.out.println("Compute primes up to which integer?");
       int n = in.nextInt();
-      Set<Integer> numSet = new TreeSet<>(); 
-      
+      Set<Integer> numSet = new TreeSet<>(); //TreeSet so ordered and can locate faster
+                                             //HashSet more efficient since only go
       
       for(int i=2; i<n; i++){
          numSet.add(i);
@@ -35,19 +32,12 @@ public class Primes
       
       Iterator<Integer> iter = numSet.iterator();
       int temp = numSet.size();
-      for(int j=0; j<temp/Math.sqrt(n); j++){ 
-          
-          for(int i=2; i<Math.sqrt(n); i++){ //2, 3, 4, 5, 6, 7    50
-              /*iter.next();
-              iter.next();
-              iter.next();
-              iter.remove();*/
-              if(iter.next()%i==0)iter.remove(); // 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12    --> 3
-              //iter.previous();
-             // iter.next();
-         }
+      for(int k =2; k*k <=n; k++){ // k = number
+          for(int i =2; i*k <=n; i++){ //i = 2 remove all multiples of i*k 2*2, 3*2, 4*2 ...
+              numSet.remove(i*k);
+          }
       }
-      
-      System.out.println(numSet);
+      System.out.println(numSet);     
+       
    }    
 }
