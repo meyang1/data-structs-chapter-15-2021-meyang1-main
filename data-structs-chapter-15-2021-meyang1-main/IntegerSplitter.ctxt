@@ -1,0 +1,7 @@
+#BlueJ class context
+comment0.target=IntegerSplitter
+comment0.text=\r\n\ \ \ Class\ for\ splitting\ an\ integer\ into\ its\ individual\ digits.\r\n
+comment1.params=number
+comment1.target=void\ split(int)
+comment1.text=\r\n\ \ \ \ \ \ Splits\ the\ given\ integer\ into\ its\ individual\ digits\r\n\ \ \ \ \ \ and\ prints\ them\ to\ the\ screen.\r\n\ \ \ \ \ \ @param\ number\ Integer\ to\ be\ split.\r\n
+numComments=2

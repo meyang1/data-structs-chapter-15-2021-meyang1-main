@@ -1,0 +1,11 @@
+#BlueJ class context
+comment0.target=WorkOrder
+comment0.text=\r\n\ \ \ This\ class\ encapsulates\ a\ work\ order\ with\ a\ priority.\r\n
+comment1.params=aPriority\ aDescription
+comment1.target=WorkOrder(int,\ java.lang.String)
+comment1.text=\r\n\ \ \ \ \ \ Constructs\ a\ work\ order\ with\ a\ given\ priority\ and\ description.\r\n\ \ \ \ \ \ @param\ aPriority\ the\ priority\ of\ this\ work\ order\r\n\ \ \ \ \ \ @param\ aDescription\ the\ description\ of\ this\ work\ order\r\n
+comment2.params=
+comment2.target=java.lang.String\ toString()
+comment3.params=otherObject
+comment3.target=int\ compareTo(java.lang.Object)
+numComments=4

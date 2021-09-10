@@ -11,7 +11,8 @@ public class StackDemo
    {
       //create Stack of <Strings> commands
       Stack<String> commands = new Stack<> ();
-       
+      //LIFO
+      
       //push onto Stack a list of commands
       commands.push("Insert 'Hello'");
       commands.push("Insert','");
@@ -20,7 +21,7 @@ public class StackDemo
       commands.push("Insert'?'");
       commands.push("Insert'?'");
       commands.push("Insert'!'");
-
+      System.out.println("First-In: " + commands.peek()); //Looks at 1st element
 
       // Now we undo the last four commands
       for (int i = 1; i <= 4; i++)
