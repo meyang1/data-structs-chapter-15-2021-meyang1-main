@@ -16,10 +16,14 @@ public class DrivewayDemo
          if (licensePlate > 0)
          {
             testDriveway.add(licensePlate);
+            testDriveway.print();
+            
          }
          else if (licensePlate < 0)
          {
             testDriveway.remove(0 - licensePlate);
+            testDriveway.print();
+            
          }
          else
          {
