@@ -1,6 +1,6 @@
 #BlueJ class context
 comment0.target=Driveway
-comment0.text=\r\n\ \ \ Class\ for\ simulating\ a\ driveway\ and\ a\ street,\ using\ stacks\r\n\ \ \ of\ cars\ with\ license\ plate\ numbers\ as\ representation.\r\n
+comment0.text=\r\n\ \ \ Driveway.java\:\ \r\n\ \ \ Class\ for\ simulating\ a\ driveway\ and\ a\ street,\ using\ stacks\r\n\ \ \ of\ cars\ with\ license\ plate\ numbers\ as\ representation.\r\n\ \ \ By\:\ Max\ Yang\r\n
 comment1.params=
 comment1.target=Driveway()
 comment1.text=\r\n\ \ \ \ \ \ Constructor.\r\n

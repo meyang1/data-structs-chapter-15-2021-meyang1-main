@@ -1,10 +1,10 @@
 import java.util.Stack;
 import java.util.Scanner;
-import java.util.LinkedList;
-import java.util.Queue;
 /**
+   Driveway.java: 
    Class for simulating a driveway and a street, using stacks
    of cars with license plate numbers as representation.
+   By: Max Yang
 */
 public class Driveway
 {
@@ -15,7 +15,7 @@ public class Driveway
    /**
       Stack representing the cars in the street.
    */
-   private Queue<Integer> street;
+   private Stack<Integer> street;
    int driveCount=0, streetCount=0;
    
    /**
@@ -25,7 +25,7 @@ public class Driveway
    {
       // Complete the constructor
       driveway = new Stack<>();
-      street = new LinkedList<>();
+      street = new Stack<>();
 
    }
 
@@ -35,7 +35,6 @@ public class Driveway
    */
    public void add(int licensePlate)
    {
-      // Complete this method
       driveway.push(licensePlate);
       driveCount++;
    }
@@ -46,24 +45,40 @@ public class Driveway
    */
    public void remove(int licensePlate)
    {
-      // Complete this method
       int count = 0;
-      for(int i=0; i<driveCount; i++){
-          if(licensePlate != driveway.peek()){
-             street.add(driveway.pop()); //remove a car from driveway to street
-             count++;
+      boolean checkCar = false;
+      
+      for(int drPlate : driveway){
+          if(drPlate == licensePlate){
+              checkCar = true;
           }
-          else{
-             street.add(driveway.pop()); //remove a car from driveway to street
-             count++;
+      } 
+      
+      System.out.println("Removing Cars: ");  
+      for(int i=0; i<driveCount; i++){
+          if(checkCar!=true){ 
+              System.out.println("Car not in driveway");
+              break; //conditional if license plate not in driveway
+          } 
+          if(licensePlate == driveway.peek()){
+             driveway.pop(); //remove a car from driveway to street
+             
              driveCount -= count;
              break;
           }
-        }
-      for(int i=0; i<count-1; i++){
-          driveway.push(street.remove());
-          driveCount++;
+          street.push(driveway.pop()); //remove a car from driveway to street
+          count++;
+          this.print(); // show process of removing
+          
       }
+      
+      System.out.println("\nAdding Cars Back: ");
+      for(int i=0; i<count; i++){ //puts cars back
+          driveway.push(street.pop());
+          driveCount++;
+          this.print(); //show process of adding back
+      }
+      
    } 
 
    /**
@@ -75,7 +90,7 @@ public class Driveway
       // Print the cars in the driveway here
       for(int drPlate : driveway){
           System.out.print(drPlate+", ");
-      }
+      } 
       System.out.println();
       System.out.println("In Street, starting at first in (one license plate per line):");
       // Print the cars in the street here
