@@ -22,6 +22,7 @@ public class DrivewayDemo
          else if (licensePlate < 0)
          {
             testDriveway.remove(0 - licensePlate);
+            System.out.println("Finished Remove: ");
             testDriveway.print();
             
          }
