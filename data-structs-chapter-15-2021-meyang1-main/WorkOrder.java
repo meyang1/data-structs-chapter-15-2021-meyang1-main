@@ -1,9 +1,9 @@
 /**
    This class encapsulates a work order with a priority.
 */
-public class WorkOrder implements Comparable
+public class WorkOrder implements Comparable //must implement comparable interface**
 {
-   private int priority;
+   private int priority; 
    private String description;
 
    /**
@@ -22,10 +22,10 @@ public class WorkOrder implements Comparable
       return "priority=" + priority + ", description=" + description;
    }
 
-   public int compareTo(Object otherObject)
+   public int compareTo(Object otherObject) //Object will let it take any obj whatsoever, so sorting will be readily available
    {
-      WorkOrder other = (WorkOrder) otherObject;
-      if (priority < other.priority) { return -1; }
+      WorkOrder other = (WorkOrder) otherObject; //cast otherObject to a WorkOrder
+      if (priority < other.priority) { return -1; } //if in the same class, can access the objects' private data
       else if (priority > other.priority) { return 1; }
       else { return 0; }
    }

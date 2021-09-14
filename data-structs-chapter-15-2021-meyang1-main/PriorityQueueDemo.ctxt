@@ -1,0 +1,6 @@
+#BlueJ class context
+comment0.target=PriorityQueueDemo
+comment0.text=\r\n\ \ \ This\ program\ demonstrates\ a\ priority\ queue\ of\ work\ orders.\ The\r\n\ \ \ most\ important\ work\ orders\ are\ removed\ first.\r\n
+comment1.params=args
+comment1.target=void\ main(java.lang.String[])
+numComments=2

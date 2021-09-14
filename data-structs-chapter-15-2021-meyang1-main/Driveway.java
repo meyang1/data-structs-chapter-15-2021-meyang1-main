@@ -54,31 +54,30 @@ public class Driveway
           }
       } 
       
-      System.out.println("Removing Cars: ");  
-      for(int i=0; i<driveCount; i++){
-          if(checkCar!=true){ 
-              System.out.println("Car not in driveway");
-              break; //conditional if license plate not in driveway
-          } 
-          if(licensePlate == driveway.peek()){
-             driveway.pop(); //remove a car from driveway to street
+      System.out.println("Removing Cars (process): ");  
+      if(checkCar){ 
+          for(int i=0; i<driveCount; i++){
+              if(licensePlate == driveway.peek()){
+                  driveway.pop(); //remove a car from driveway to street
              
-             driveCount -= count;
-             break;
+                  driveCount -= count;
+                  break;
+                }
+                street.push(driveway.pop()); //remove a car from driveway to street
+                count++;
+                this.print(); // show process of removing
           }
-          street.push(driveway.pop()); //remove a car from driveway to street
-          count++;
-          this.print(); // show process of removing
-          
-      }
       
-      System.out.println("\nAdding Cars Back: ");
+      
+      System.out.println("\nAdding Cars Back (process): ");
       for(int i=0; i<count; i++){ //puts cars back
           driveway.push(street.pop());
           driveCount++;
           this.print(); //show process of adding back
       }
-      
+    }
+    else
+        System.out.println("Not in driveway!");
    } 
 
    /**
