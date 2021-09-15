@@ -1,0 +1,26 @@
+#BlueJ class context
+comment0.target=BankAccount
+comment0.text=\r\n\ \ \ A\ bank\ account\ has\ a\ balance\ that\ can\ be\ changed\ by\ \r\n\ \ \ deposits\ and\ withdrawals.\r\n
+comment1.params=anAccountNumber
+comment1.target=BankAccount(int)
+comment1.text=\r\n\ \ \ \ \ \ Constructs\ a\ bank\ account\ with\ a\ zero\ balance\r\n\ \ \ \ \ \ @param\ anAccountNumber\ the\ account\ number\ for\ this\ account\r\n
+comment2.params=anAccountNumber\ initialBalance
+comment2.target=BankAccount(int,\ double)
+comment2.text=\r\n\ \ \ \ \ \ Constructs\ a\ bank\ account\ with\ a\ given\ balance\r\n\ \ \ \ \ \ @param\ anAccountNumber\ the\ account\ number\ for\ this\ account\r\n\ \ \ \ \ \ @param\ initialBalance\ the\ initial\ balance\r\n
+comment3.params=
+comment3.target=int\ getAccountNumber()
+comment3.text=\r\n\ \ \ \ \ \ Gets\ the\ account\ number\ of\ this\ bank\ account.\r\n\ \ \ \ \ \ @return\ the\ account\ number\r\n
+comment4.params=amount
+comment4.target=void\ deposit(double)
+comment4.text=\r\n\ \ \ \ \ \ Deposits\ money\ into\ the\ bank\ account.\r\n\ \ \ \ \ \ @param\ amount\ the\ amount\ to\ deposit\r\n
+comment5.params=amount
+comment5.target=void\ withdraw(double)
+comment5.text=\r\n\ \ \ \ \ \ Withdraws\ money\ from\ the\ bank\ account.\r\n\ \ \ \ \ \ @param\ amount\ the\ amount\ to\ withdraw\r\n
+comment6.params=
+comment6.target=double\ getBalance()
+comment6.text=\r\n\ \ \ \ \ \ Gets\ the\ current\ balance\ of\ the\ bank\ account.\r\n\ \ \ \ \ \ @return\ the\ current\ balance\r\n
+comment7.params=
+comment7.target=int\ hashCode()
+comment8.params=
+comment8.target=int\ equals()
+numComments=9
