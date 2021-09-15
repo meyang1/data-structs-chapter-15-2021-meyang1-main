@@ -67,12 +67,14 @@ public class BankAccount
    }
    
    public int hashCode(){
-       int hc=0;
-       return hc;
+       return accountNumber;
    }
     
-   public int equals(){
-       int c=0;
-       return c; 
+   public boolean equals(Object otherBankAccount){ //must override Object class' equal method
+       BankAccount other = (BankAccount)otherBankAccount;
+       if(other.getAccountNumber() == accountNumber){
+         return true;  
+       }
+       return false;
    }
 }

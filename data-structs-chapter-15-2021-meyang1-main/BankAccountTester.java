@@ -31,7 +31,6 @@ public class BankAccountTester
       System.out.println(acct3.hashCode());
       System.out.println("Expected: 1731");
       accounts.add(acct4);
-      
       System.out.println(accounts.size());
       System.out.println("Expected: 3");
    }
