@@ -70,6 +70,7 @@ public class BankAccount
        return accountNumber;
    }
     
+   
    public boolean equals(Object otherBankAccount){ //must override Object class' equal method
        BankAccount other = (BankAccount)otherBankAccount;
        if(other.getAccountNumber() == accountNumber){
