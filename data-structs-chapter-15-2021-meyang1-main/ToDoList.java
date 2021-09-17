@@ -1,3 +1,5 @@
+ 
+
 import java.util.PriorityQueue;
 import java.util.Scanner;
 /**
@@ -12,15 +14,17 @@ import java.util.Scanner;
 public class ToDoList
 {
    // Instance variable(s)
-   . . .
+   private PriorityQueue<Task> todolist;
 
+   
    /**
       Constructor
    */
    public ToDoList()
    {
       // Complete this
-      . . .
+      todolist = new PriorityQueue<>();
+      
    }
 
    /**
@@ -52,7 +56,7 @@ public class ToDoList
       } 
       while (! option.equals("quit"));
    }
-   
+   int tempIndex = 0;
    /**
     * Parse the add option line.
     * @param optionStr the option line
@@ -60,11 +64,26 @@ public class ToDoList
    public void addTask(String optionStr)
    {
       // Complete this method
-      . . .
-         
-         
-         
-         
+       int check = 0;
+       
+       //roundabout way of getting index of 2nd space
+      for(int i=0; i<optionStr.length(); i++){
+          if(optionStr.charAt(i)==' '){
+              tempIndex=i;
+              check++;
+            }
+            
+           if(check==2) break;
+           
+      }
+      
+      //separates priority
+      int tempPriority = Integer.parseInt(optionStr.substring(4,tempIndex)); //cuts out priority from string sent in, changes string to int
+      //separates task
+      String sepTask = optionStr.substring(optionStr.indexOf(" ")+1,optionStr.length()); //removes priority from string sent in
+      
+      todolist.add(new Task(tempPriority,sepTask));
+  
    }
 
    /**
@@ -76,7 +95,8 @@ public class ToDoList
       Task next = null;
       
       // Complete this method
-      . . .
+      next = todolist.peek();
+      //System.out.print(next);
       
       
       if (next == null)
@@ -85,6 +105,7 @@ public class ToDoList
       }
       else
       {
+         todolist.remove();
          System.out.println(next.getDescription());
       }
    }

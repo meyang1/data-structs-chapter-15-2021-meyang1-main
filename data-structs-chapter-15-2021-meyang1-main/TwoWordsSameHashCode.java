@@ -22,12 +22,31 @@ public class TwoWordsSameHashCode
    public static Map<Integer, HashSet<String>> generateHashMap(String filename)
    {
       Map<Integer, HashSet<String>> fileWords = new HashMap<>();
-      Scanner scan = new Scanner(new File(filename));
-      while(scan.hasNext()){
-          String word = scan.next();
-          fileWords.put(word.hashCode(), (fileWords.get(Integer.valueOf(word.hashCode()))).add());
+      
+      try (Scanner scan = new Scanner(new File(filename)))
+      {
+          while(scan.hasNext()){
+              String word = scan.next(); 
+            //  System.out.println(word);
+               
+              Set<Integer> keySet = fileWords.keySet();
+              Integer hash = Integer.valueOf(word.hashCode());
+              System.out.println(fileWords.get(hash));
+              if(fileWords.get(hash)==null){        
+                  HashSet <String> wordSet = new HashSet<>();
+                  wordSet.add(word);
+                  fileWords.put(word.hashCode(), wordSet);
+              }
+              //fileWords.put(word.hashCode(), fileWords.get(hash).add(word));
+            }
+            System.out.println(fileWords);
       }
-      System.out.println(fileWords);
+      catch (FileNotFoundException e){
+        {
+            System.out.println("Cannot open: " + filename);
+        }
+      }
+      return fileWords;
    }
 
    /**

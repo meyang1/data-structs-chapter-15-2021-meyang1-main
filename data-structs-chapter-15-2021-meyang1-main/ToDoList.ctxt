@@ -1,0 +1,16 @@
+#BlueJ class context
+comment0.target=ToDoList
+comment0.text=\r\n\ Implement\ a\ to\ do\ list.\ Tasks\ have\ a\ priority\ between\ \r\n\ 1\ and\ 9\ (with\ 1\ being\ most\ urgent),\ and\ a\ description.\r\n\ When\ the\ user\ enters\ the\ command\ 'add\ priority\ description',\ \r\n\ the\ program\ adds\ a\ new\ task.\ When\ the\ user\ enters\ next,\ \r\n\ the\ program\ removes\ and\ prints\ the\ most\ urgent\ task.\ \r\n\ The\ quit\ command\ quits\ the\ program.\ \r\n\ Use\ a\ priority\ queue\ in\ your\ solution.\r\n
+comment1.params=
+comment1.target=ToDoList()
+comment1.text=\r\n\ \ \ \ \ \ Constructor\r\n
+comment2.params=
+comment2.target=void\ run()
+comment2.text=\r\n\ Display\ a\ menu\ and\ accepts\ commands.\r\n
+comment3.params=optionStr
+comment3.target=void\ addTask(java.lang.String)
+comment3.text=\r\n\ Parse\ the\ add\ option\ line.\r\n\ @param\ optionStr\ the\ option\ line\r\n
+comment4.params=
+comment4.target=void\ nextTask()
+comment4.text=\r\n\ \ \ \ \ \ Get\ the\ next\ highest\ priority\ task\ and\ \r\n\ \ \ \ \ \ display\ the\ description\ to\ the\ user.\r\n
+numComments=5

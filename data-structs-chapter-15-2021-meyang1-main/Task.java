@@ -1,3 +1,5 @@
+ 
+
 /**
    Class for creating a priority To Do list.
 */
@@ -38,6 +40,10 @@ public class Task implements Comparable<Task>
    @Override
    public int compareTo(Task otherTask)
    {
+       Task other = (Task) otherTask;
+       if (priority < other.priority) {return -1;}
+       else if (priority > other.priority) {return 1;}
+       else {return 0;}
 
    }
 }

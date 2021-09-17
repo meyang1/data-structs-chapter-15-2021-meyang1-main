@@ -1,0 +1,15 @@
+#BlueJ class context
+comment0.target=Task
+comment0.text=\r\n\ \ \ Class\ for\ creating\ a\ priority\ To\ Do\ list.\r\n
+comment1.params=priority\ description
+comment1.target=Task(int,\ java.lang.String)
+comment1.text=\r\n\ \ \ \ \ \ Constructor.\r\n\ \ \ \ \ \ @param\ description\ The\ description\ of\ the\ task.\r\n\ \ \ \ \ \ @param\ priority\ The\ priority\ of\ the\ task.\r\n
+comment2.params=
+comment2.target=int\ getPriority()
+comment2.text=\r\n\ The\ task\ priority.\r\n\ @return\ the\ priority.\r\n
+comment3.params=
+comment3.target=java.lang.String\ getDescription()
+comment3.text=\r\n\ The\ task\ description.\r\n\ @return\ the\ task\ description.\r\n
+comment4.params=otherTask
+comment4.target=int\ compareTo(PQLabPair.Task)
+numComments=5
