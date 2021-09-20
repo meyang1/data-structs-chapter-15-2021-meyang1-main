@@ -26,20 +26,22 @@ public class TwoWordsSameHashCode
       try (Scanner scan = new Scanner(new File(filename)))
       {
           while(scan.hasNext()){
-              String word = scan.next(); 
-            //  System.out.println(word);
+              String word = clean(scan.next()); 
                
               Set<Integer> keySet = fileWords.keySet();
               Integer hash = Integer.valueOf(word.hashCode());
-              System.out.println(fileWords.get(hash));
+              
               if(fileWords.get(hash)==null){        
                   HashSet <String> wordSet = new HashSet<>();
                   wordSet.add(word);
                   fileWords.put(word.hashCode(), wordSet);
               }
-              //fileWords.put(word.hashCode(), fileWords.get(hash).add(word));
-            }
-            System.out.println(fileWords);
+              else{
+                  HashSet <String> wordSet = fileWords.get(word.hashCode());
+                  wordSet.add(word);
+                  fileWords.put(word.hashCode(), wordSet);
+              }
+              }
       }
       catch (FileNotFoundException e){
         {
@@ -59,10 +61,23 @@ public class TwoWordsSameHashCode
  
        for(Integer num : keySet){
           if(hashCodes.get(num).size()>1){
-             System.out.println(hashCodes.get(num));
+             System.out.println(num + ": " + hashCodes.get(num));
+             
           }
-          
       }
-
+   }
+   
+   public static String clean(String s)
+   {
+      String r = "";
+      for (int i = 0; i < s.length(); i++)
+      {
+         char c = s.charAt(i);
+         if (Character.isLetter(c))
+         {
+            r = r + c;
+         }
+      }
+      return r;
    }
 }

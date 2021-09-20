@@ -7,4 +7,6 @@ comment1.text=\r\n\ \ \ \ \ \ Makes\ a\ hash\ code\ to\ string\ map\ based\ on\ 
 comment2.params=hashCodes
 comment2.target=void\ printSameCodes(java.util.Map)
 comment2.text=\r\n\ \ \ \ \ \ Prints\ all\ the\ words\ with\ the\ same\ hash\ codes\r\n\ \ \ \ \ \ @param\ hashCodes\ the\ map\ to\ print\ from\r\n
-numComments=3
+comment3.params=s
+comment3.target=java.lang.String\ clean(java.lang.String)
+numComments=4
