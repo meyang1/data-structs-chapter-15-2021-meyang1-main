@@ -1,0 +1,7 @@
+#BlueJ class context
+comment0.target=Pair
+comment1.params=xC\ yC
+comment1.target=Pair(int,\ int)
+comment2.params=
+comment2.target=void\ printCoordinates()
+numComments=3
