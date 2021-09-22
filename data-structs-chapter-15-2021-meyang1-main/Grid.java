@@ -22,41 +22,47 @@ public class Grid
    */
    public void floodfill(int row, int column)
    {
-      int count = 1;
+      int count = 1; 
+      Pair coordPair = new Pair(0, 0); //moves to last highest Num
       pixels[row][column] = count;
       count++;
       RC.push(new Pair(row, column));
-      //while(true){
+      for(int i=0; i<100; i++){
           //RC.pop();
           //filling 
-          if(pixels[row-1][column] == 0 && row!=0) { //up
+          if(row!=0 && pixels[row-1][column] == 0 ) { //up
               pixels[row-1][column] = count;
               count++;
-              RC.push(new Pair(row-1, column));
+              coordPair = new Pair(row-1,column);
+              RC.push(coordPair);
           }
-          if(pixels[row][column+1] == 0 && column!=9) { //right
+          if( column!=9 && pixels[row][column+1] == 0 ) { //right
               pixels[row][column+1] = count;
               count++;
-              RC.push(new Pair(row, column+1));
+              coordPair = new Pair(row, column+1);
+              RC.push(coordPair);
           }
-          if(pixels[row+1][column] == 0 && row!=9){ //right 
+          if(row!=9 && pixels[row+1][column] == 0){ //right 
               pixels[row+1][column] = count;
               count++;
+              coordPair = new Pair(row+1, column);
               RC.push(new Pair(row+1, column));
+              highestCoord = new Pair(row+1, column);
           }
-          if(pixels[row][column-1] == 0 && column!=0) { //up
+          if(column!=0 && pixels[row][column-1] == 0) { //up
               pixels[row][column-1] = count;
               count++;
               RC.push(new Pair(row, column-1));
+              highestCoord = new Pair(row, column-1);
           }
-          
-          //choosing next coordinate pair
-          
-          
-          
-          
-          System.out.println(pixels);
-      //}
+              //choosing next coordinate pair direction
+              //gets last highest number coordinate and sets to new
+              row = highestCoord.getRow();
+              column = highestCoord.getCol();
+                  
+                  
+              System.out.println(pixels);
+      }
    }
    
    @Override
