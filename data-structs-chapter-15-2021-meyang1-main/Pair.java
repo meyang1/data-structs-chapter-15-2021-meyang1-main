@@ -14,7 +14,9 @@ public class Pair
     public int getCol(){
         return y;
     }
+    
     public void printCoordinates(){
         System.out.println("("+ x + ", " + y + ")");
     }
+    
 }

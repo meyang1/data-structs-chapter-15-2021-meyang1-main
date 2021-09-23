@@ -11,5 +11,5 @@ comment3.params=
 comment3.target=java.lang.String\ getDescription()
 comment3.text=\r\n\ The\ task\ description.\r\n\ @return\ the\ task\ description.\r\n
 comment4.params=otherTask
-comment4.target=int\ compareTo(PQLabPair.Task)
+comment4.target=int\ compareTo(Task)
 numComments=5

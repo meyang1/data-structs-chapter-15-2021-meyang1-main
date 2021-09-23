@@ -25,7 +25,6 @@ public class RunwaySimulator
    public void addTakeOff(String flightSymbol)
    {
       takeOff.add(flightSymbol);
-
    }
 
    /**
@@ -44,14 +43,14 @@ public class RunwaySimulator
    public void handleNextAction()
    {
       String nextAction = "";
-      if(landing.size()!=0)
+      if(landing.size()!=0) //landing is not empty, priority
       {
-          System.out.println(landing.remove());
+          System.out.println(landing.remove()); 
           if(landing.size()!=0) nextAction = landing.peek();         
           else if(takeOff.size()!=0) nextAction = takeOff.peek();
           else nextAction = "All processes are complete!";
       }
-      else if(takeOff.size()!=0)
+      else if(takeOff.size()!=0) 
       {
           System.out.println(takeOff.remove());
           if(landing.size()!=0) nextAction = landing.peek();         
@@ -59,5 +58,6 @@ public class RunwaySimulator
           else nextAction = "All processes are complete!";
       }
       System.out.println("Next: " + nextAction);
+      
    }
 }

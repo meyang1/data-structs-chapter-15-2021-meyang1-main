@@ -22,45 +22,67 @@ public class Grid
    */
    public void floodfill(int row, int column)
    {
-      int count = 1; 
+      int count = 1; int checkNew = 0; 
       Pair highestCoord = new Pair(0, 0); //moves to last highest Num
-      pixels[row][column] = count;
+      pixels[row][column] = count; //set first coord pair
       count++;
-      RC.push(new Pair(row, column));
-      for(int i=0; i<100; i++){
-          //RC.pop();
+      RC.push(new Pair(row, column)); //push onto stack
+      while(count<=100){
+          System.out.println(RC.pop());
           //filling 
           if(row!=0 && pixels[row-1][column] == 0 ) { //up
               pixels[row-1][column] = count;
               count++;
               RC.push(new Pair(row-1, column));         
               highestCoord = new Pair(row-1, column);
+              checkNew++;
           }
           if(column!=9 && pixels[row][column+1] == 0 ) { //right
               pixels[row][column+1] = count;
               count++;
               RC.push(new Pair(row, column+1));
               highestCoord = new Pair(row, column+1);
+              checkNew++;
           }
-          if(row!=9 && pixels[row+1][column] == 0){ //right 
+          if(row!=9 && pixels[row+1][column] == 0){ //down 
               pixels[row+1][column] = count;
               count++;
               RC.push(new Pair(row+1, column));
               highestCoord = new Pair(row+1, column);
+              checkNew++;
           }
-          if(column!=0 && pixels[row][column-1] == 0) { //up
+          if(column!=0 && pixels[row][column-1] == 0) { //left
               pixels[row][column-1] = count;
               count++;
               RC.push(new Pair(row, column-1));
               highestCoord = new Pair(row, column-1);
+              checkNew++;
           }
           //choosing next coordinate pair direction
           //gets last highest number coordinate and sets to new
           row = highestCoord.getRow();
           column = highestCoord.getCol();
-              
-                  
-      //    System.out.println(pixels);
+          
+          //conditional if does not reach 100
+          if(checkNew==0){ 
+              if(row>0){ //set new to up
+                  row--;
+              }
+              else if(column<9){ //right
+                  column++;
+              }
+              else if(row<9){ //down
+                  row++; 
+              }
+              else if (column>0){ //left
+                  column--; 
+              }
+              System.out.println(row);
+              highestCoord = new Pair(row, column); //set to new highest pair
+          }
+          System.out.println("(" + row + ", " + column + ")");
+          checkNew = 0; //check if repeated coordinate (no new)
+     
       }
    }
    
