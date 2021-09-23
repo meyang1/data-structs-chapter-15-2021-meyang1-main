@@ -8,7 +8,7 @@ public class LinkedListWork
 {
    public static void main(String[] args)
    {
-
+       LinkedList<String> words = new LinkedList<>();
        words.addLast("Aggressive");
        words.addLast("Brown");
        words.addLast("Cool");

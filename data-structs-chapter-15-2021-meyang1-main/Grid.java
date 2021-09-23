@@ -23,7 +23,7 @@ public class Grid
    public void floodfill(int row, int column)
    {
       int count = 1; 
-      Pair coordPair = new Pair(0, 0); //moves to last highest Num
+      Pair highestCoord = new Pair(0, 0); //moves to last highest Num
       pixels[row][column] = count;
       count++;
       RC.push(new Pair(row, column));
@@ -33,19 +33,18 @@ public class Grid
           if(row!=0 && pixels[row-1][column] == 0 ) { //up
               pixels[row-1][column] = count;
               count++;
-              coordPair = new Pair(row-1,column);
-              RC.push(coordPair);
+              RC.push(new Pair(row-1, column));         
+              highestCoord = new Pair(row-1, column);
           }
-          if( column!=9 && pixels[row][column+1] == 0 ) { //right
+          if(column!=9 && pixels[row][column+1] == 0 ) { //right
               pixels[row][column+1] = count;
               count++;
-              coordPair = new Pair(row, column+1);
-              RC.push(coordPair);
+              RC.push(new Pair(row, column+1));
+              highestCoord = new Pair(row, column+1);
           }
           if(row!=9 && pixels[row+1][column] == 0){ //right 
               pixels[row+1][column] = count;
               count++;
-              coordPair = new Pair(row+1, column);
               RC.push(new Pair(row+1, column));
               highestCoord = new Pair(row+1, column);
           }
