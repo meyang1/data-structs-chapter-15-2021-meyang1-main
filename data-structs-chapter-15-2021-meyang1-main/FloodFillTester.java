@@ -5,7 +5,7 @@ public class FloodFillTester
       Grid gr = new Grid();
       gr.floodfill(3, 4);
       String[] rows = gr.toString().split("\n");
-      System.out.println(rows[0]);
+      System.out.println(rows[2]);
       System.out.println("Expected: 15  12   9   6   2  81  79  77  75  73");
       System.out.println(rows[3]);
       System.out.println("Expected: 14  11   8   5   1   3  78  76  74  72");

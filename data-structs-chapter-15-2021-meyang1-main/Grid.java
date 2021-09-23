@@ -54,13 +54,13 @@ public class Grid
               RC.push(new Pair(row, column-1));
               highestCoord = new Pair(row, column-1);
           }
-              //choosing next coordinate pair direction
-              //gets last highest number coordinate and sets to new
-              row = highestCoord.getRow();
-              column = highestCoord.getCol();
+          //choosing next coordinate pair direction
+          //gets last highest number coordinate and sets to new
+          row = highestCoord.getRow();
+          column = highestCoord.getCol();
+              
                   
-                  
-              System.out.println(pixels);
+      //    System.out.println(pixels);
       }
    }
    
