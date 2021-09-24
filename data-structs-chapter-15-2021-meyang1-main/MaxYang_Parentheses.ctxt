@@ -1,0 +1,9 @@
+#BlueJ class context
+comment0.target=MaxYang_Parentheses
+comment0.text=\r\n\ change\ the\ class\ name\ to\ your\ firstlast_parentheses\r\n\r\n\ @author\ (your\ name)\r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment1.params=args
+comment1.target=void\ main(java.lang.String[])
+comment1.text=\r\n\ A\ quiz\r\n\ Exam\ whether\ an\ expression\ is\ correctly\ formed\ with\ Parentheses\r\n\ thus\ are\ balanced\r\n\r\n\ Use\ a\ queue\ or\ a\ stack\ to\ push\ and\ pop\ parenthesis\ from\ a\ String\r\n\ If\ the\ opening\ and\ closing\ parentheses\ don't\ match\r\n\ \ \ \ \ \ The\ parentheses\ are\ unbalanced.\ Exit\r\n\ If\ at\ the\ end\ the\ stack/queue\ is\ empty\r\n\ \ \ \ \ \ The\ parentheses\ are\ balanced.\r\n\ Else\r\n\ \ \ \ \ \ The\ parentheses\ are\ not\ balanced\r\n\r\n\ Write\ the\ code\ to\ test\ the\ the\ strings\ below\r\n\ You\ should\ create\ at\ least\ one\ test\ of\ your\ own\r\n
+comment2.params=equation
+comment2.target=boolean\ checkBalanced(java.lang.String)
+numComments=3

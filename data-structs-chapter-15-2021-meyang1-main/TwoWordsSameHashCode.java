@@ -12,7 +12,7 @@ import java.util.HashMap;
    based on the filename.
    P15.5 (pg 717)
 */
-public class TwoWordsSameHashCode
+public class TwoWordsSameHashCode extends MaxYang_Parentheses
 {
    /**
       Makes a hash code to string map based on the words in the specified file
