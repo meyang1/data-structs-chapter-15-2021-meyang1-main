@@ -27,16 +27,16 @@ public class TwoWordsSameHashCode extends MaxYang_Parentheses
       {
           while(scan.hasNext()){
               String word = scan.next(); 
-               
+              //String word = clean(scan.next());//clean method, if only searching for words
               Set<Integer> keySet = fileWords.keySet();
               Integer hash = Integer.valueOf(word.hashCode());
               
-              if(fileWords.get(hash)==null){        
+              if(fileWords.get(hash)==null){ //if no words in HashSet value, then create new
                   HashSet <String> wordSet = new HashSet<>();
                   wordSet.add(word);
                   fileWords.put(word.hashCode(), wordSet);
               }
-              else{
+              else{ //else add to HashSet
                   HashSet <String> wordSet = fileWords.get(word.hashCode());
                   wordSet.add(word);
                   fileWords.put(word.hashCode(), wordSet);
@@ -62,7 +62,6 @@ public class TwoWordsSameHashCode extends MaxYang_Parentheses
        for(Integer num : keySet){
           if(hashCodes.get(num).size()>1){
              System.out.println(num + ": " + hashCodes.get(num));
-             
           }
       }
    }

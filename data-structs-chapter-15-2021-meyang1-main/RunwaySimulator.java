@@ -50,9 +50,9 @@ public class RunwaySimulator
           else if(takeOff.size()!=0) nextAction = takeOff.peek();
           else nextAction = "All processes are complete!";
       }
-      else if(takeOff.size()!=0) 
+      else if(takeOff.size()!=0) //otherwise, takeoff goes
       {
-          System.out.println(takeOff.remove());
+          System.out.println(takeOff.remove()); 
           if(landing.size()!=0) nextAction = landing.peek();         
           else if(takeOff.size()!=0) nextAction = takeOff.peek();
           else nextAction = "All processes are complete!";
