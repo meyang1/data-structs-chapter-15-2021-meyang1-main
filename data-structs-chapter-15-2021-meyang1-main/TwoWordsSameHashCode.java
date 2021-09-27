@@ -26,7 +26,7 @@ public class TwoWordsSameHashCode extends MaxYang_Parentheses
       try (Scanner scan = new Scanner(new File(filename)))
       {
           while(scan.hasNext()){
-              String word = clean(scan.next()); 
+              String word = scan.next(); 
                
               Set<Integer> keySet = fileWords.keySet();
               Integer hash = Integer.valueOf(word.hashCode());
@@ -41,7 +41,7 @@ public class TwoWordsSameHashCode extends MaxYang_Parentheses
                   wordSet.add(word);
                   fileWords.put(word.hashCode(), wordSet);
               }
-              }
+          }
       }
       catch (FileNotFoundException e){
         {

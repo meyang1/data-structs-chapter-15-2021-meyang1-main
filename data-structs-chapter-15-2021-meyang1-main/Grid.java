@@ -5,10 +5,8 @@ public class Grid
 {
    private static final int SIZE = 10;
    int[][] pixels = new int[SIZE][SIZE];
-   Stack<Pair> RC = new Stack<>();
-   
-   //Order: top, right, bottom, left
-   //
+   Stack<Pair> RC = new Stack<>();  
+    
    public void Grid(){
        //initialize an array values to 0
        for(int i=0; i<SIZE; i++){
@@ -16,7 +14,7 @@ public class Grid
                pixels[i][j]=0;
            }
        }
-    }
+   }
    /**
       Flood fill, starting with the given row and column.
    */
@@ -28,7 +26,7 @@ public class Grid
       count++;
       RC.push(new Pair(row, column)); //push onto stack
       while(count<=100){
-          System.out.println(RC.pop());
+          RC.pop();
           //filling 
           if(row!=0 && pixels[row-1][column] == 0 ) { //up
               pixels[row-1][column] = count;
@@ -77,10 +75,8 @@ public class Grid
               else if (column>0){ //left
                   column--; 
               }
-              System.out.println(row);
               highestCoord = new Pair(row, column); //set to new highest pair
           }
-          System.out.println("(" + row + ", " + column + ")");
           checkNew = 0; //check if repeated coordinate (no new)
      
       }
